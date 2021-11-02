@@ -174,7 +174,7 @@ console.log(tvBrandTypeNameString(inventory[1]))
 
 //5b
 console.log('Opdracht 5B')
-tvPriceString = (price) => "€" + price + ',-'
+tvPriceString = (price) => "€ " + price + ',-'
 console.log(tvPriceString(inventory[0].price))
 
 //5c
@@ -183,7 +183,7 @@ getScreenSize = size => {
     const inchToCm = 2.54
     let returnString = ''
     for (let i = 0; i < size.length; i++) {
-        returnString += +size[i] + ' inch ' + '(' + (size[1] * inchToCm) + ' cm)'
+        returnString += +size[i] + ' inch ' + '(' + (size[i] * inchToCm) + ' cm)'
         if (i === size.length - 1) {
             break
         } else {
@@ -214,7 +214,7 @@ function showTvsOnHtml(inventory) {
         containerHtml.appendChild(showTvOnHtml);
         showTvOnHtml.innerHTML = tvBrandTypeNameString(inventory[i]);
         showTvOnHtml.innerHTML += '<br/>' + tvPriceString(inventory[i].price);
-        showTvOnHtml.innerHTML += '<br/>' + tvPriceString(getScreenSize(inventory[i].availableSizes));
+        showTvOnHtml.innerHTML += '<br/>' + getScreenSize(inventory[i].availableSizes);
     }
 }
 
