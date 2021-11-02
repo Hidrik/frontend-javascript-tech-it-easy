@@ -204,7 +204,7 @@ const tvOnHtml = document.createElement("p");
 containerHtml.appendChild(tvOnHtml);
 tvOnHtml.innerHTML = tvBrandTypeNameString(tvToShow);
 tvOnHtml.innerHTML += '<br/>' + tvPriceString(tvToShow.price);
-tvOnHtml.innerHTML += '<br/>' + tvPriceString(getScreenSize(tvToShow.availableSizes));
+tvOnHtml.innerHTML += '<br/>' + getScreenSize(tvToShow.availableSizes);
 
 //5e
 console.log('Opdracht 5E')
